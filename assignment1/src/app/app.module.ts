@@ -9,6 +9,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
 import { UserComponent } from './auth/user/user.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateUserComponent } from './auth/create-user/create-user.component';
 
 const appRoutes: Routes = [
   { path: 'login', component : LoginComponent}
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     AdminComponent,
     LogoutComponent,
     UserComponent,
-    routingComponents
+    routingComponents,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

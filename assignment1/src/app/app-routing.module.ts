@@ -6,14 +6,15 @@ import {AdminComponent} from './auth/admin/admin.component';
 import {LogoutComponent} from './auth/logout/logout.component';
 
 import {UserComponent} from './auth/user/user.component';
-
+import {CreateUserComponent} from './auth/create-user/create-user.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'user', component: UserComponent }
+  { path: 'user', component: UserComponent },
+  { path: 'createUser', component: CreateUserComponent }
 ];
 
 
@@ -23,4 +24,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [LoginComponent, AdminComponent, LogoutComponent, UserComponent]
+export const routingComponents = [LoginComponent, AdminComponent, LogoutComponent, UserComponent, CreateUserComponent]
