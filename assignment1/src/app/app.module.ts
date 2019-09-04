@@ -7,21 +7,35 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './auth/admin/admin.component';
 import { LogoutComponent } from './auth/logout/logout.component';
 import { UserComponent } from './auth/user/user.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: 'login', component : LoginComponent}
+];
 
 @NgModule({
+
+  
+
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     AdminComponent,
     LogoutComponent,
-    UserComponent
+    UserComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+   
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
