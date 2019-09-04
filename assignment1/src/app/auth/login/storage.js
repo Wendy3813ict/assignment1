@@ -6,12 +6,30 @@
 
 
 function AddtoLocalstorage() {
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("email").value;
-    let str = JSON.stringify(email);
+    var addedusername = document.getElementById("createUser").value;
+    var addedemail = document.getElementById("Addemail").value;
 
-localStorage.setItem(username, str);
-alert(`welcome ${username} and email ${str}` );
+    const user = {
+        groupid: "",
+        chanelid: "",
+        email: ""
+    }
+    let str = JSON.stringify(user);
+
+localStorage.setItem(addedusername, str);
+alert(`welcome ${addedusername} and email ${str}` );
+}
+
+
+
+function Login() {
+    var username = document.getElementById("username").value;
+    if(localStorage.getItem(username)!==null){
+        alert(`welcome ${username}`);
+        
+    } else{
+        alert(`${username} not exists`);
+    }
 
 
 
@@ -19,6 +37,12 @@ alert(`welcome ${username} and email ${str}` );
 
 function logout() {
     var username = document.getElementById("username").value;
+    if(username !== null){
+        localStorage.removeItem(username);
 
-    localStorage.removeItem(username);
+    } else{
+        window.localStorage.clear();
+    }
+    
+    
 }
