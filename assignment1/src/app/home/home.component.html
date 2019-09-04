@@ -16,16 +16,23 @@
       <a class="navbar-brand" href="#">ChatAPP</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li ><a href="#">Home</a></li>
      <li> <a [routerLink]="['/login']" class="button">Login</a></li>
      <li><a routerLink="/admin" class="button">Go to admin</a></li>
   
      <li> <a routerLink="/user" class="button">See my group</a></li>
+     <li> <a  class="button" ng-change="logout()">logout</a></li>
     </ul>
   </div>
 </nav>
   
 
+<script>
+function logout(){
+alert('ss')    
+    
+}
+</script>
 
 </body>
 </html>

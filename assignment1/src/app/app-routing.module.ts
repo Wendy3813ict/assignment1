@@ -9,7 +9,6 @@ import {UserComponent} from './auth/user/user.component';
 
 
 
-
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
