@@ -4,19 +4,21 @@
 
 
 
-function AddtoLocalstorage() {
-  var username = document.getElementById("username").value;
-  var email = document.getElementById("email").value;
 
+function AddtoLocalstorage() {
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
     let str = JSON.stringify(email);
 
 localStorage.setItem(username, str);
-alert(str);
+alert(`welcome ${username} and email ${str}` );
 
 
 
 }
 
 function logout() {
-    window.localStorage.clear();
-  }
+    var username = document.getElementById("username").value;
+
+    localStorage.removeItem(username);
+}
