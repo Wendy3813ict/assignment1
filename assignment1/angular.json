@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/app/auth/login/storage.js", "src/app/home/logout.js"]
+            "scripts": [
+              "src/app/auth/login/storage.js", 
+              "src/app/home/logout.js"]
           },
           "configurations": {
             "production": {

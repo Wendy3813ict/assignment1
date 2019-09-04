@@ -16,3 +16,7 @@ alert(str);
 
 
 }
+
+function logout() {
+    window.localStorage.clear();
+  }
